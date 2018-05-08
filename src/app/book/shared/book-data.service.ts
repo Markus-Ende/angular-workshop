@@ -1,5 +1,5 @@
-
-import {of as observableOf,  Observable } from 'rxjs';
+import { Observable } from "rxjs";
+import { from } from "rxjs/observable/from";
 import { Injectable } from "@angular/core";
 import { Book } from "./book";
 import { HttpClient } from "@angular/common/http";
@@ -9,7 +9,7 @@ export class BookDataService {
   constructor(private http: HttpClient) {}
 
   getBooksArray(): Observable<Book[]> {
-    return observableOf([]);
+    return from([]);
   }
 
   getBooks(): Observable<Book[]> {
